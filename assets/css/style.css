@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 2rem;
+    user-select: none;
+    position: relative;
+    margin: 30px 30px 16px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    -webkit-box-shadow: 0 0 20px #eee;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#1e00de),
+        color-stop(51%, #a81447),
+        to(#1e00de)
+    );
+    background-image: -o-linear-gradient(left, #1e00de 0%, #a81447 51%, #1e00de 100%);
+    background-image: linear-gradient(to right, #1e00de 0%, #a81447 51%, #1e00de 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+span {
+    position: absolute;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    transform-origin: var(--transform-origin);
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+.btn.active span {
+    opacity: 1;
+    transform: scale(1);
+}
+/* 
+.btn::before {
+    content: "";
+    width: 190px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transform: scale(1);
+    z-index: 10;
+    transform-origin: var(--transform-origin);
+    transition: 0.2s linear;
+    display: var(--display);
+}
+
+.btn:hover::before {
+    transform: scale(0);
+} */
